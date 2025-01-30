@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <%- include('./partials/head') %>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('/img/fondo\ principal.jpg'); /* Placeholder for background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: #84c040;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            margin-left: 45%;
+            
+        }
+
+        .btn:hover {
+            background: #33b300;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #000000;
+            padding: 10px 20px;
+        }
+        
+        .navbar .nav-link {
+            color: rgb(255, 255, 255);
+            margin: 0 10px;
+            transition: color 0.3s ease;
+           
+        }
+
+        .navbar .nav-link:hover {
+            color: rgb(120, 252, 33);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 20px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <img src="/img/logo (3).png" alt="#" style="width: 250px; height: auto;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/">Inicio</a>
+              <a class="nav-link" href="servicios">Servicios</a>
+              <a class="nav-link" href="contacto">Contacto</a>
+              <a class="nav-link" href="asistente">Asistente</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: rgba(158, 158, 158, 0.694);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            margin-top: 10%;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        h1 span {
+            color: rgb(11, 127, 28);
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service {
+            width: 30%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .service img {
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+        }
+        .progress-container {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .progress-bar {
+            background-color: rgb(11, 127, 28);
+            height: 20px;
+            width: 95%;
+            position: relative;
+        }
+        .progress-bar span {
+            position: absolute;
+            right: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .profile {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .profile img {
+            width: 200px;
+            border-radius: 20%;
+        }
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service {
+                width: 80%;
+            }
+            .container {
+               
+                margin-top: 30%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MIS SERVI<span>CIOS</span></h1>
+        <p>Soy un desarrollador web apasionado por crear sitios modernos, funcionales y optimizados.</p>
+        <p>Aquí tienes lo que puedo hacer por ti:</p>
+        
+        <div class="services">
+            <div class="service">
+                <img src="/img/diseño 1.jpg" alt="Diseño UX/UI">
+                <h3>Diseño UX/UI</h3>
+                <p>Diseño de interfaces intuitivas y atractivas, priorizando la experiencia del usuario.</p>
+            </div>
+            <div class="service">
+                <img src="/img/diseño 2.jpg" alt="Desarrollo Web">
+                <h3>Desarrollo Web</h3>
+                <p>Creación de sitios web modernos con tecnologías como HTML, CSS, JavaScript y frameworks como React.</p>
+            </div>
+            <div class="service">
+                <img src="/img/diseño 3.png" alt="Optimización SEO">
+                <h3>Optimización SEO</h3>
+                <p>Mejoro la visibilidad de tu sitio en los motores de búsqueda para atraer más clientes.</p>
+            </div>
+            <div class="service">
+                <img src="/img/diseño 4.png" alt="Apps Web">
+                <h3>Aplicaciones Web</h3>
+                <p>Desarrollo de aplicaciones interactivas y escalables utilizando tecnologías de última generación.</p>
+            </div>
+            <div class="service">
+                <img src="/img/diseño 5.png" alt="Seguridad Web">
+                <h3>Seguridad Web</h3>
+                <p>Protección contra ataques y vulnerabilidades para garantizar la seguridad de tu sitio.</p>
+            </div>
+            <div class="service">
+                <img src="/img/diseño 6.png" alt="Código Limpio">
+                <h3>Código Limpio</h3>
+                <p>Escribo código eficiente, optimizado y fácil de mantener para garantizar un mejor rendimiento.</p>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <h3>Experiencia en Desarrollo Web</h3>
+            <div class="progress-bar">
+                <span>95%</span>
+            </div>
+        </div>
+
+        <div class="profile">
+            <h3>Sobre Mí</h3>
+            <p>Soy un desarrollador web con experiencia en la creación de soluciones digitales innovadoras.</p>
+            <img src="/img/imagen de inicio.png" alt="Mi Foto">
+        </div>
+</body>
+</html>

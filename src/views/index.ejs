@@ -8,31 +8,303 @@
 </head>
 <body>
     <%- include('./partials/head') %>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('/img/fondo\ principal.jpg'); /* Placeholder for background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: #84c040;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            margin-left: 45%;
+            
+        }
+
+        .btn:hover {
+            background: #33b300;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #000000;
+            padding: 10px 20px;
+        }
+        
+        .navbar .nav-link {
+            color: rgb(255, 255, 255);
+            margin: 0 10px;
+            transition: color 0.3s ease;
+           
+        }
+
+        .navbar .nav-link:hover {
+            color: rgb(120, 252, 33);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 20px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="/img/logo (3).png" alt="#" style="width: 250px; height: auto;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#">Inicio</a>
+              <a class="nav-link" href="#inicio">Mis Proyectos</a>
+              <a class="nav-link" href="servicios">Servicios</a>
+              <a class="nav-link" href="contacto">Contacto</a>
+              <a class="nav-link" href="asistente">Asistente</a>
+            </div>
           </div>
         </div>
-      </nav>
+    </nav>
 
-      <img src="/img/images.jpg" alt="hole yopi">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Plasencia Alva, Hector Isai</h1>
+            <p>¡Hola! Soy un entusiasta del aprendizaje en programación. Estoy dando mis primeros pasos en este apasionante mundo del desarrollo web y me encanta explorar nuevas tecnologías y herramientas. Este portafolio es mi espacio para compartir mi progreso y algunos de mis proyectos iniciales. ¡Gracias por visitar!</p>
+            <a href="#" class="btn">Contactame</a>
+        </div>
+    </div>
+
+
+
+    <div class="hero2" href="#" id="inicio">
+        <div class="titu">
+            <h1><strong>Mis Proyectos</strong></h1>
+        </div>
+        <div class="hero-content">
+
+            <div class="projects">
+                <div class="project-card">
+                    
+                    <div class="project-info">
+                        <h3>Venta de Actículos deportivos</h3>
+                        <p>"Página web de artículos deportivos hecha con HTML y CSS. Diseño limpio y adaptativo que resalta productos y conecta con clientes apasionados."</p>
+                        <a href="#" class="btn">VER MAS</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Portafolio</h3>
+                        <p>"Portafolio creado con HTML y CSS. Diseño adaptativo y sencillo que destaca mis primeros proyectos, reflejando mi pasión por aprender y mejorar en el desarrollo web."</p>
+                        <a href="#" class="btn">VER MAS</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Pagina Wed "Santa Cruz de Toledo"</h3>
+                        <p>Diseñada en HTML y CSS, con un diseño limpio y adaptativo que destaca productos de calidad y conecta con clientes apasionados por el deporte."</p>
+                        <a href="#" class="btn">VER MAS</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        <style>
+            
+            .titu {
+                position: absolute;
+                top: 7%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                z-index: 2;
+                color: #ffffff;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .titu >h1{
+                -webkit-text-stroke: 2px rgb(54, 119, 28);
+
+            }
+            .hero2{
+                position: relative;
+                background-image: url('/img/logo2.jpg'); /* Placeholder for background image */
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: justify; 
+            }
+            .projects {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                margin-top: 80px;
+            }
+
+            .project-card {
+                background: #5e5e5ed7;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                width: 300px;
+            }
+
+            .project-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .project-info {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .project-info h3 {
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+
+            .project-info p {
+                margin-bottom: 20px;
+                font-size: 1rem;
+                color: #000000;
+                text-align: justify;
+            }
+
+            @media (max-width: 768px) {
+                .projects {
+                    flex-direction: column;
+                    align-items: center;
+                    
+                }
+
+                .project-card {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
+            .hero2 img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            </style>
+    </div>
+    
+    <br>
+    <footer style="background-color: #000000; color: white; padding: 20px 0; text-align: center; position: absolute">
+        <div style="position: absolute; bottom: 0; width: 100%; text-align: center;"></div>
+          <p>&copy; 2025 Hector Isai Plasencia Alva. Todos los derechos reservados.</p>
+          <p>
+            <a href="#" style=" margin: 0 15px;">Términos y condiciones</a> | 
+            <a href="#" style=" margin: 0 15px;">Política de privacidad</a> | 
+            <a href="contacto" style=" margin: 0 15px;">Contacto</a>
+          </p>
+          <p>Sígueme en:</p>
+          <a href="https://www.facebook.com" style=" margin: 0 10px;">Facebook</a>
+          <a href="https://wa.me/51957713180?text=Hola%20este%20es%20el%20%20numero%20de%20Hector">
+            WhatsApp</a>
+          <a href="https://www.youtube.com/feed/you" style=" margin: 0 10px;">YouTube </a>
+        </div>
+      </footer>
+    <style>
+    
+        footer {
+            margin-top: 62%;
+            width: 100%;
+            color: #ffffff;
+        }
+        footer a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #33b300;
+        }
+        @media (max-width: 768px) {
+            footer {
+                margin-top: 270%;
+            }
+        }
+
+        
+    </style>
+
+</body>
+</html>
 </body>
 </html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('./partials/head') %>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('/img/fondo\ principal.jpg'); /* Placeholder for background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: #84c040;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            margin-left: 45%;
+            
+        }
+
+        .btn:hover {
+            background: #33b300;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #000000;
+            padding: 10px 20px;
+        }
+        
+        .navbar .nav-link {
+            color: rgb(255, 255, 255);
+            margin: 0 10px;
+            transition: color 0.3s ease;
+           
+        }
+
+        .navbar .nav-link:hover {
+            color: rgb(120, 252, 33);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 20px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <img src="/img/logo (3).png" alt="#" style="width: 250px; height: auto;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/">Inicio</a>
+              <a class="nav-link" href="servicios">Servicios</a>
+              <a class="nav-link" href="contacto">Contacto</a>
+              <a class="nav-link" href="asistente">Asistente</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('/img/contactame.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .contact {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+    <div class="contact">
+        <h3>Contáctame</h3>
+        <p>📧 Email: hector.plasencia@tecsup.edu.pe</p>
+        <p>📱 WhatsApp: +51 957 713 180</p>
+        <p>🌐 Portafolio: www.tuportafolio.com</p>
+    </div>
+</div>
+</body>
+</html>
