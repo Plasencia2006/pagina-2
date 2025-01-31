@@ -103,6 +103,7 @@
             .hero h1 {
                 font-size: 2rem;
                 text-align: center;
+                margin-left: 100%;
             }
 
             .hero p {
@@ -114,6 +115,25 @@
                 padding: 8px 16px;
                 font-size: 0.9rem;
             }
+            .bot {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                margin-top: 10%;
+            }
+
+            .bot h1 {
+                font-size: 1.5em;
+                text-align: center;
+            }
+
+            .bot iframe {
+                width: 100%;
+                max-width: 350px;
+                height: 430px;
+            }
+            
         }
 
     </style>
@@ -136,20 +156,67 @@
           </div>
         </div>
     </nav>
-    <div class="bot" style="display: grid; margin-right: 50%; margin-top: 10%;">
-        <div style="flex: 1; text-align: center;">
-            <h1 style="color: #ffffff; font-size: 2em;">Asistente de Hector Plasencia</h1>
-        </div><br>
-        <div style="flex: 1; text-align: left; margin-right: 50%;">
-            <iframe
-                allow="microphone;"
-                width="350"
-                height="430"
-                src="https://console.dialogflow.com/api-client/demo/embedded/f5445a9c-044c-4ba3-b523-b107d1a3f21e">
-            </iframe>
-        </div>
-    </div>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #59585830;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .bot {
+            text-align: center;
+            background-color: #59585830;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20%;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #f8f8f8;
+            font-size: 2em;
+        }
+        iframe {
+            border: none;
+            margin-top: 20px;
+        }
+        @media (min-width: 769px) {
+            .bot {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                
+            }
 
+            .bot h1 {
+                font-size: 2em;
+                margin-right: 20px;
+            }
+
+            .bot iframe {
+                width: 350px;
+                height: 430px;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bot">
+        <h1>Asistente de Hector Plasencia</h1>
+        <iframe
+            allow="microphone;"
+            width="350"
+            height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/f5445a9c-044c-4ba3-b523-b107d1a3f21e">
+        </iframe>
+    </div>
+    </div>
+    
+    
 </body>
     
 </body>
